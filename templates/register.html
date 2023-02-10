@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="wrapper">
+
+	<div class="card card-authentication1 mx-auto my-4">
+		<div class="card-body">
+		 <div class="card-content p-2">
+
+		  <div class="card-title text-uppercase text-center py-3">Sign Up</div>
+		    <form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="form-group">
+					{{student_form|crispy}}
+				</div>
+                <button type="submit" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
+			</form>
+		   </div>
+		  </div>
+		  <div class="card-footer text-center py-3">
+		    <p class="text-warning mb-0">Already have an account? <a href="{% url 'loginpage' %}"> Sign In here</a></p>
+		  </div>
+	     </div>
+   </div>
+</body>
+</html>

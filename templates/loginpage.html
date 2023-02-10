@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form method="post">
+				{% csrf_token %}
+			  <div class="form-group">
+			  <label for="exampleInputUsername" class="sr-only">Username</label>
+			   <div class="position-relative has-icon-right">
+				  <input type="text" name="uname" id="exampleInputUsername" class="form-control input-shadow" placeholder="Enter Username">
+				  <div class="form-control-position">
+					  <i class="icon-user"></i>
+				  </div>
+			   </div>
+			  </div>
+			  <div class="form-group">
+			  <label for="exampleInputPassword" class="sr-only">Password</label>
+			   <div class="position-relative has-icon-right">
+				  <input type="password" name="pass" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter Password">
+				  <div class="form-control-position">
+					  <i class="icon-lock"></i>
+				  </div>
+			   </div>
+			  </div>
+
+			 <button type="submit"  class="btn btn-light btn-block">Login</button>
+			  <div class="text-center mt-3"></div>
+
+			 <div class="form-row mt-4">
+			  <div class="form-group mb-0 col-6">
+<!--			   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> Facebook</button>-->
+			 </div>
+			 <div class="form-group mb-0 col-6 text-right">
+<!--			  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>-->
+			 </div>
+			</div>
+
+			 </form>
+</body>
+</html>

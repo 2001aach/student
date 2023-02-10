@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<table>
+    <tr>
+        <th>sl No.</th>
+        <th>NAME</th>
+        <th>CONTACT NO</th>
+        <th>AGE</th>
+        <th>PHOTO</th>
+        <th>DELETE</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td class="py-1">{{ forloop.counter }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.phonenumber }}</td>
+        <td>{{ i.age }}</td>
+        <td><img src="{{i.photo.url}}" style="width:100px" ></td>
+        <td><form  action="{% url 'delete_student' i.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+

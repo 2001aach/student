@@ -1,0 +1,50 @@
+<!--{% extends 'index2.html' %}-->
+<!--{% load crispy_forms_tags %}-->
+<!--{% block content %}-->
+<!--<div class="col-lg-12 grid-margin stretch-card">-->
+<!--              <div class="card">-->
+<!--                <div class="card-body">-->
+<!--                  <h4 class="card-title">STUDENT</h4>-->
+<!--                  <div class="table-responsive">-->
+<!--                    <table class="table table-striped">-->
+<!--                      <thead>-->
+
+<!--                        <tr>-->
+<!--                          <th>sl No.</th>-->
+<!--                          <th>NAME</th>-->
+<!--                          <th>CONTACT NO</th>`-->
+<!--                          <th>AGE</th>-->
+<!--                          <th>PHOTO</th>-->
+<!--                          <th>DELETE</th>-->
+<!--                        </tr>-->
+<!--                      </thead>-->
+<!--                      <tbody>-->
+<!--                      {% for i in data %}-->
+<!--                        <tr>-->
+<!--                          <td class="py-1">{{ forloop.counter }}</td>-->
+<!--                          <td>{{ i.name }}</td>-->
+<!--                          <td>{{ i.phonenumber }}</td>-->
+<!--                          <td>{{ i.DOB }}</td>-->
+<!--                           <td><img src="{{i.photo.url }}" style="width:100px"></td>-->
+<!--                          <td><form  action="{% url 'delete_student' i.id %}" method="post">-->
+<!--                            {% csrf_token %}-->
+<!--                          <button type="submit" class="btn btn-primary">Delete</button>-->
+<!--                          </form>-->
+<!--                          </td>-->
+<!--                        </tr>-->
+<!--                      {% endfor %}-->
+<!--                      </tbody>-->
+<!--                    </table>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--{% endblock %}-->
+
+
+<!doctype html>
+<html>
+<body>
+<h1>hello</h1>
+</body>
+</html>
